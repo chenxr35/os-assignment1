@@ -1,18 +1,18 @@
-all : myprod mycons dph
+all : prod cons dph
 .PHONY : clean
 
 
-myprod : myprod.c
-	gcc myprod.c -lrt -lpthread -lm -o myprod
+prod : prod.c
+	gcc prod.c -lrt -lpthread -lm -o prod
 
-mycons : mycons.c
-	gcc mycons.c -lrt -lpthread -lm -o mycons
+cons : cons.c
+	gcc cons.c -lrt -lpthread -lm -o cons
 
 dph : dph.c
 	gcc dph.c -lrt -lpthread -lm -o dph
 
 clean : 
-	rm  myprod
-	rm  mycons
+	rm  prod
+	rm  cons
 	rm  dph 
 	rm  *.o
