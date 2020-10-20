@@ -1,0 +1,18 @@
+all : myprod mycons dph
+.PHONY : clean
+
+
+myprod : myprod.c
+	gcc myprod.c -lrt -lpthread -lm -o myprod
+
+mycons : mycons.c
+	gcc mycons.c -lrt -lpthread -lm -o mycons
+
+dph : dph.c
+	gcc dph.c -lrt -lpthread -lm -o dph
+
+clean : 
+	rm  myprod
+	rm  mycons
+	rm  dph 
+	rm  *.o
